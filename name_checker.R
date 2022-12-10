@@ -803,7 +803,7 @@ product_name_df_delay_ua <- plyr::ldply(scrape_raw, data.frame)
 
 
 write.csv(product_name_df_delay_ua,
-          file = paste0("polite_data/Amazon_name_", date, ".csv"))
+          file = paste0("logs/Amazon_name_", date, ".csv"))
 
 
 ## MERGING THE LIVE VERSION AND THE LOCAL HARDCORDED VERSION
@@ -948,7 +948,7 @@ credentials <- creds_envvar(
 if (n_row_final_results == 0) {
   write.csv(
     as.data.frame(n_row_final_results),
-    file = paste0("polite_data/Amazon_name_log_corretti", date, ".csv")
+    file = paste0("logs/Amazon_name_log_corretti", date, ".csv")
   )
   
 } else {
@@ -968,4 +968,4 @@ if (n_row_final_results == 0) {
 }
 
 write.csv(results,
-          file = paste0("log/Amazon_name_results_logs_", date, ".csv"))
+          file = paste0("logs/Amazon_name_results_logs_", date, ".csv"))
