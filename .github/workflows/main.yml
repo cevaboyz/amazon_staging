@@ -48,7 +48,7 @@ jobs:
       run: |
         git config --local user.name github-actions
         git config --local user.email "actions@github.com"
-        git add polite_data/*
+        git add logs/*
         git commit -am "GH ACTION Autorun POLITE $(date)"
         git push origin main --force
       env:
