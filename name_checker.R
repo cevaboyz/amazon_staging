@@ -1264,7 +1264,7 @@ product_name_df_delay_ua <- plyr::ldply(scrape_raw, data.frame)
 
 
 write.csv(product_name_df_delay_ua,
-          file = paste0("polite_data/Amazon_name_", date, ".csv"))
+          file = paste0("logs/Amazon_name_2_", date, ".csv"))
 
 
 ## MERGING THE LIVE VERSION AND THE LOCAL HARDCORDED VERSION
