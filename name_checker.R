@@ -1385,6 +1385,11 @@ tbl_html <-
     final_results %>% gt() %>% as_raw_html()
 
 
+write.csv(final_results, paste0("final_results", format(date, "%d-%b-%Y %H.%M"), ".csv"))
+
+file_path <- paste0("final_results", format(date, "%d-%b-%Y %H.%M"), ".csv")
+
+
 #############################
 #############################
 #############################Blastula / GMAIL
@@ -1424,9 +1429,8 @@ if (n_row_final_results == 0) {
     
     email <-
         email %>% add_attachment(
-            file = paste0("logs/Amazon_name_results_logs_", date, ".csv"),
-            filename = paste0("logs/Amazon_name_results_logs_", date)
-        )
+            file = file_path
+             )
 }
 
 
