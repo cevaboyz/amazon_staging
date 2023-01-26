@@ -1448,8 +1448,7 @@ if (n_row_final_results == 0) {
 smtp_send(
     email,
     from = EMAIL_SENDER,
-    to = EMAIL_SENDER,
-    cc = c(EMAIL_SENDER),
+    to = EMAIL_RECIPIENT
     subject = "REPORT PERIODICO AMAZON ITALIA > VERIFICA TITOLI PRODOTTI",
     credentials = credentials,
     verbose = TRUE
